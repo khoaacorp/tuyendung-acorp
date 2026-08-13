@@ -5,7 +5,7 @@
 # ============================================================
 backend:
   name: github
-  repo: THAY-TEN-TAI-KHOAN/THAY-TEN-KHO   # <-- SỬA DÒNG NÀY
+  repo: khoaacorp/tuyendung-acorp
   branch: main
   commit_messages:
     create: "Thêm {{collection}}: {{slug}}"
