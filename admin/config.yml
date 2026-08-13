@@ -16,7 +16,6 @@ backend:
 
 site_url: https://zippy-empanada-125379.netlify.app
 display_url: https://zippy-empanada-125379.netlify.app
-logo_url: https://tuyendung.acorp.vn/images/logoac.jpg
 media_folder: "images/uploads"
 public_folder: "images/uploads"
 
