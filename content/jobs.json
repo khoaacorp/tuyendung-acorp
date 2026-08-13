@@ -1,0 +1,67 @@
+{
+  "jobs": [
+    {
+      "title": "Đại Diện Kinh Doanh", "tag": "Tuyển gấp", "hot": true,
+      "loc": "Hà Nội, Đà Nẵng, TP.HCM", "salary": "10 – 20 triệu/tháng", "time": "Linh động theo tiến độ dự án",
+      "mota": ["Phát triển mạng lưới đối tác và khách hàng tại địa bàn phụ trách", "Tư vấn và ký kết hợp đồng với khách hàng, giải quyết các vấn đề tài chính", "Khảo sát công trình, giám sát thi công đảm bảo tiến độ và chất lượng", "Cập nhật thị trường, nắm bắt xu hướng cạnh tranh", "Cung cấp tư liệu marketing bằng ảnh/video thực tế từ công trình", "Chăm sóc khách hàng sau bán hàng, đảm bảo chỉ tiêu doanh số"],
+      "yeucau": ["Độ tuổi 25 – 30", "Có 2 – 3 năm kinh nghiệm Sales/Đại diện kinh doanh (ưu tiên ngành Nội thất, Bất động sản, Vật liệu xây dựng)", "Kỹ năng giao tiếp, đàm phán xuất sắc; nhạy bén với thị trường", "Tinh thần chiến đấu mạnh mẽ, chịu được áp lực doanh số cao"],
+      "quyenloi": ["Thu nhập 10 – 20 triệu/tháng (lương cứng + thưởng doanh số)", "Được đào tạo trực tiếp cùng CEO giàu kinh nghiệm", "Lộ trình thăng tiến rõ ràng lên Trưởng phòng hoặc Giám đốc Kinh doanh Khu vực", "Thưởng lễ, Tết theo quy định"]
+    },
+    {
+      "title": "QS / Nhân Viên Dự Toán Nội Thất", "tag": "Kỹ thuật", "hot": false,
+      "loc": "Vinhomes Grand Park, TP. Thủ Đức", "salary": "12 – 20 triệu/tháng", "time": "Thứ 2 – Thứ 7 · Tuyển 3 người",
+      "mota": ["Tiếp nhận bản vẽ kiến trúc 2D/3D từ các bộ phận liên quan", "Bóc tách chi tiết kích thước, khối lượng cửa đi, cửa sổ, vách kính (nhôm, kính, nhựa, inox)", "Trao đổi với kỹ thuật công trình và xưởng sản xuất để xử lý vấn đề kỹ thuật"],
+      "yeucau": ["Độ tuổi 22 – 30, Nam/Nữ", "Thành thạo AutoCAD và SketchUp", "Ưu tiên có kinh nghiệm bóc tách nội thất, đặc biệt cửa nhôm kính hoặc cửa nhựa", "Nhận cả sinh viên mới tốt nghiệp ngành Cơ khí, Xây dựng, Kiến trúc", "Cẩn thận, chính xác, có tư duy hình học không gian tốt"],
+      "quyenloi": ["Lương cứng 10 triệu/tháng + hoa hồng/thưởng dự án — tổng thu nhập cam kết 12 – 20 triệu/tháng, không giới hạn khi năng lực tốt", "BHXH, BHYT sau thử việc", "Thưởng lễ, Tết, lương tháng 13", "Được đào tạo chuyên sâu kỹ thuật ngành cửa"]
+    },
+    {
+      "title": "Trợ Lý Marketing", "tag": "Marketing", "hot": false,
+      "loc": "Vinhomes Grand Park, Long Bình, Thủ Đức", "salary": "10 – 20 triệu/tháng", "time": "Thứ 2 – Thứ 7 · Tuyển 2 người",
+      "mota": ["Phối hợp trực tiếp với cấp quản lý để thực thi các chiến dịch quảng bá", "Lên kế hoạch nội dung đa nền tảng", "Tối ưu hoá chiến dịch quảng cáo trên Facebook, Zalo, TikTok", "Hỗ trợ tổ chức sự kiện; sản xuất hình ảnh/video cơ bản", "Theo dõi chỉ số tương tác và hiệu quả chiến dịch", "Quản lý đội ngũ Intern, CTV; hướng dẫn, đào tạo quy trình làm việc"],
+      "yeucau": ["Độ tuổi 25 – 30", "Tối thiểu 1 – 2 năm kinh nghiệm vị trí tương đương hoặc Content/Digital Marketing", "Viết lách tốt, có thẩm mỹ; sử dụng được Canva, CapCut", "Chủ động, trung thực, tinh thần trách nhiệm cao, chịu được áp lực"],
+      "quyenloi": ["Thu nhập 10 – 20 triệu/tháng (lương cứng + hoa hồng + thưởng KPI + thưởng năng lực)", "Làm việc trực tiếp với CEO có 10+ năm kinh nghiệm", "Lộ trình thăng tiến: Trưởng team → Trưởng phòng → Trợ lý CEO", "BHXH, BHYT, thưởng lễ/Tết, lương tháng 13, du lịch hằng năm"]
+    },
+    {
+      "title": "Trợ Lý Kinh Doanh (Sales Assistant)", "tag": "Tuyển gấp", "hot": true,
+      "loc": "Vinhomes Grand Park, TP. Thủ Đức", "salary": "15 – 30 triệu+/tháng", "time": "Thứ 2 – Thứ 7 (8:00–12:00, 13:30–17:30) · Tuyển 2-3 người",
+      "mota": ["Hỗ trợ nhân sự, đối tác, khách hàng, marketing và quy trình vận hành hàng ngày", "Tư vấn và chăm sóc khách hàng trên nguồn data có sẵn", "Soạn thảo hợp đồng, quản lý dữ liệu khách hàng", "Theo dõi doanh số, lập báo cáo định kỳ", "Tham gia xây dựng quy trình bán hàng"],
+      "yeucau": ["Độ tuổi 22 – 30", "Có tư duy phát triển bản thân, mong muốn thăng tiến lâu dài", "Kỹ năng giao tiếp tốt, chủ động, chịu học hỏi", "Tinh thần làm việc tốc độ cao và trách nhiệm", "Ưu tiên có kinh nghiệm sales hoặc chăm sóc khách hàng"],
+      "quyenloi": ["Thu nhập 15 – 30 triệu+/tháng tuỳ năng lực (lương cứng + thưởng hiệu suất + hoa hồng thanh toán ngay)", "Thử việc hưởng 85% lương chính thức", "Đào tạo trực tiếp từ CEO có hơn 10 năm kinh nghiệm", "Cơ hội thăng tiến: Trưởng team, Trưởng phòng, Trợ lý CEO, Giám đốc Kinh doanh"]
+    },
+    {
+      "title": "Trợ Lý Giám Đốc", "tag": "Văn phòng", "hot": false,
+      "loc": "Vinhomes Grand Park, TP. Thủ Đức", "salary": "10 – 18 triệu/tháng", "time": "Ưu tiên ứng viên có thể bắt đầu ngay",
+      "mota": ["Vị trí \"dưới 1 người, trên nhiều người\" — làm việc trực tiếp với CEO mỗi ngày", "Sắp xếp, quản lý và theo dõi công việc cho team", "Xử lý đa mảng: marketing, kinh doanh, nhân sự, vận hành"],
+      "yeucau": ["Siêng năng, trung thực, cầu tiến", "Thành thạo Excel, Google Sheet, Word", "Có tổ chức, tinh thần chịu trách nhiệm cao", "Nền tảng: quản trị kinh doanh, marketing, kinh tế, tài chính, kế toán, ngoại thương"],
+      "quyenloi": ["Mức lương 10 – 18 triệu tuỳ năng lực", "Học hỏi trực tiếp về vận hành doanh nghiệp", "Cơ hội thăng tiến thành Quản lý vận hành / Trợ lý giám đốc"]
+    },
+    {
+      "title": "Chuyên Viên Digital Marketing", "tag": "Marketing", "hot": false,
+      "loc": "Vinhomes Grand Park, TP. Thủ Đức", "salary": "10 – 15 triệu/tháng", "time": "Thứ 2 – 6 (8:00–17:30) + sáng Thứ 7 · Tuyển 3 người",
+      "mota": ["Quản lý fanpage và website công ty", "Lên kế hoạch nội dung trên TikTok, YouTube, Facebook và các nền tảng khác", "Cài đặt công cụ quảng cáo: Facebook Manager, Google Tag Manager", "Xây dựng kế hoạch Ads trên Google, Facebook, TikTok, Zalo, YouTube", "Phối hợp đội content tạo nội dung quảng cáo", "Tối ưu quảng cáo đạt KPI và báo cáo kết quả"],
+      "yeucau": ["Ưu tiên sinh năm 1997 – 2002, tốt nghiệp Cao đẳng trở lên ngành Marketing, Truyền thông", "Có kiến thức Facebook Ads, Google Ads; dùng được Canva, CapCut, Google Analytics", "Kỹ năng viết nội dung; tiếng Anh cơ bản", "Có laptop cá nhân; tư duy tích cực, chủ động, chịu được áp lực"],
+      "quyenloi": ["Lương 10 – 15 triệu/tháng", "BHXH, BHYT, 12 ngày phép, lương tháng 13", "Thưởng lễ Tết, khám sức khoẻ, du lịch định kỳ", "Xét tăng lương tháng 6 và tháng 12 hằng năm"]
+    },
+    {
+      "title": "Nhân Viên Content SEO", "tag": "Marketing", "hot": false,
+      "loc": "21/4 Lê Hồng Phong, Hải Châu, Đà Nẵng", "salary": "7 – 9 triệu/tháng", "time": "Thứ 2 – 6 (8:00–17:30) + sáng Thứ 7 · Tuyển 4 người",
+      "mota": ["Nghiên cứu, phân loại và đánh giá từ khoá kết hợp phân tích khách hàng", "Quản lý bài viết trên WordPress theo nguyên tắc Content Marketing", "Tối ưu trải nghiệm người dùng, xây dựng liên kết nội bộ", "Sử dụng công cụ SEO: Google Analytics, Google Search Console, Ahrefs"],
+      "yeucau": ["Ưu tiên sinh năm 1997 – 2003, tốt nghiệp Cao đẳng trở lên (Marketing, E-commerce, Truyền thông...)", "0 – 1 năm kinh nghiệm — có đào tạo cho người mới", "Thành thạo WordPress, biết đo lường hiệu quả từ khoá", "Có laptop cá nhân, phương tiện đi lại; tiếng Anh cơ bản"],
+      "quyenloi": ["Lương 7 – 9 triệu/tháng", "BHXH, BHYT, 12 ngày phép, lương tháng 13", "Thưởng lễ Tết, khám sức khoẻ định kỳ", "Xét tăng lương 2 lần/năm"]
+    },
+    {
+      "title": "Trưởng Team Kinh Doanh (Nội Thất)", "tag": "Thu nhập cao", "hot": true,
+      "loc": "Vinhomes Grand Park, Long Bình, Thủ Đức", "salary": "25 – 50 triệu/tháng", "time": "Thứ 2 – Thứ 7 (8:00–12:00, 13:30–17:30) · Tuyển 3 người",
+      "mota": ["Tuyển dụng, đào tạo nhân viên về sản phẩm và kỹ năng bán hàng", "Đôn đốc, giám sát đội ngũ đạt chỉ tiêu KPI hàng tháng; đánh giá hiệu suất định kỳ", "Trực tiếp xử lý khách hàng khó, khách hàng tiềm năng lớn và giải quyết khiếu nại", "Quản lý dữ liệu khách hàng; kiểm duyệt hợp đồng và báo giá", "Xây dựng kế hoạch kinh doanh; phân tích dữ liệu bán hàng; báo cáo doanh thu định kỳ"],
+      "yeucau": ["Độ tuổi 30 – 40", "Tối thiểu 2 năm kinh nghiệm vị trí tương đương (ưu tiên xây dựng, nội thất, bất động sản)", "Chính trực, công bằng, giao tiếp tốt, đồng cảm, can đảm", "Kỹ năng lãnh đạo, lập kế hoạch, giải quyết vấn đề, quản trị rủi ro"],
+      "quyenloi": ["Thu nhập 25 – 50 triệu/tháng tuỳ năng lực", "Lương cứng + thưởng hiệu suất + hoa hồng kinh doanh — hoa hồng thanh toán ngay lập tức", "Thử việc hưởng 100% lương chính thức", "Đào tạo trực tiếp từ CEO 10+ năm kinh nghiệm"]
+    },
+    {
+      "title": "Sale Admin · Kế Toán Bán Hàng", "tag": "Văn phòng", "hot": false,
+      "loc": "21/4 Lê Hồng Phong, Hải Châu, Đà Nẵng", "salary": "7 triệu + 1% doanh số", "time": "Thứ 2 – 6 (8:00–17:30) + sáng Thứ 7",
+      "mota": ["Chăm sóc, tư vấn khách hàng có nhu cầu nhôm kính, nội thất, công trình qua kênh online", "Gửi báo giá, chốt hợp đồng; phối hợp đội kỹ thuật", "Theo dõi tiến độ bàn giao và thanh toán", "Hạch toán doanh thu, chi phí; xuất hoá đơn GTGT bán hàng", "Báo cáo công việc hàng tuần"],
+      "yeucau": ["Ưu tiên sinh năm 1998 – 2002, tối thiểu Cao đẳng ngành Marketing, Sales, Kế toán hoặc liên quan", "Có kinh nghiệm Sales hoặc Kế toán bán hàng (ưu tiên ngành nội thất/xây dựng)", "Giao tiếp tốt, linh hoạt, tư vấn được qua Zalo/điện thoại", "Có laptop cá nhân, mong muốn công việc ổn định"],
+      "quyenloi": ["Lương cơ bản 7 triệu + 1% doanh số + thưởng nóng", "BHXH, BHYT, 12 ngày phép, lương tháng 13", "Thưởng lễ Tết, khám sức khoẻ định kỳ", "Xét tăng lương tháng 6 và tháng 12 hằng năm"]
+    }
+  ]
+}

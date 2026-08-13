@@ -1,0 +1,37 @@
+{
+  "articles": [
+    {
+      "title": "Lễ ký kết đầu tư & hợp tác kinh doanh tại Acorp",
+      "label": "Lễ ký kết hợp tác",
+      "image": "images/uploads/le-ky-ket-hop-tac.jpg",
+      "photos": ["images/uploads/le-ky-ket-hop-tac.jpg", "images/uploads/hop-dinh-huong.jpg", "images/uploads/hop-nhom-kinh-doanh.jpg"],
+      "body": [
+        "Tại văn phòng Acorp - Vinhomes Grand Park, công ty đã tổ chức lễ ký kết đầu tư và hợp tác kinh doanh với các đối tác, đánh dấu bước tiến mới trong chiến lược phát triển hệ sinh thái đa ngành gồm Adoor, Aguru, Acity và Adigital.",
+        "Buổi lễ có sự tham gia của ban lãnh đạo cùng đông đảo đội ngũ nhân sự các phòng ban. Các bên đã cùng trao đổi định hướng, thống nhất kế hoạch triển khai và cam kết đồng hành lâu dài.",
+        "Hoạt động ký kết hợp tác là một phần trong lộ trình hiện thực hoá khát vọng trở thành tập đoàn hạng A của Acorp — nơi mỗi thành viên đều có cơ hội tham gia những dự án thực tế ngay từ sớm."
+      ]
+    },
+    {
+      "title": "Đào tạo nội bộ — nâng cấp đội ngũ mỗi tuần",
+      "label": "Đào tạo nội bộ",
+      "image": "images/uploads/dao-tao-noi-bo-1.jpg",
+      "photos": ["images/uploads/dao-tao-noi-bo-1.jpg", "images/uploads/dao-tao-ky-nang.jpg", "images/uploads/hop-toan-cong-ty.jpg", "images/uploads/khong-gian-lam-viec.jpg"],
+      "body": [
+        "Đào tạo nội bộ là hoạt động diễn ra thường xuyên tại Acorp. Các buổi huấn luyện về chuyên môn, kỹ năng bán hàng, marketing và tư duy quản trị được tổ chức ngay tại văn phòng với sự dẫn dắt của ban lãnh đạo và các quản lý giàu kinh nghiệm.",
+        "Nhân sự mọi cấp bậc — từ thực tập sinh đến trưởng nhóm — đều được tham gia, thực hành trực tiếp trên bảng, thảo luận tình huống thực tế và nhận phản hồi ngay trong buổi học.",
+        "Đây chính là giá trị \"Phát triển chính mình\" mà Acorp cam kết: mỗi thành viên được nâng cấp bản thân liên tục để sẵn sàng cho các vị trí quản lý, lãnh đạo tương lai."
+      ]
+    },
+    {
+      "title": "Giao lưu & chào đón sinh viên — thế hệ trẻ tại Acorp",
+      "label": "Giao lưu sinh viên",
+      "image": "images/uploads/giao-luu-sinh-vien.jpg",
+      "photos": ["images/uploads/giao-luu-sinh-vien.jpg", "images/uploads/su-kien-tan-sinh-vien.jpg", "images/uploads/vinh-danh-tang-qua.jpg"],
+      "body": [
+        "Acorp thường xuyên tổ chức các buổi giao lưu, tham quan văn phòng và talkshow với sinh viên các trường đại học, cao đẳng — nơi các bạn trẻ được gặp gỡ trực tiếp ban lãnh đạo, tìm hiểu môi trường làm việc thực tế và các cơ hội thực tập, việc làm.",
+        "Nhiều bạn sinh viên sau chương trình đã trở thành thực tập sinh và nhân viên chính thức của Acorp, được đào tạo bài bản ngay từ những ngày đầu.",
+        "Với môi trường \"thân thiện, yêu thương và kết nối\", Acorp luôn chào đón thế hệ trẻ dám học hỏi, dám thử thách để cùng nhau kiến tạo tương lai."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+# ============================================================
+# CẤU HÌNH TRANG QUẢN TRỊ — TUYỂN DỤNG ACORP
+# Chỉ cần sửa DÒNG "repo:" bên dưới thành tên GitHub của bạn
+# theo dạng:  ten-tai-khoan/ten-kho  (ví dụ: khoaacorp/tuyendung-acorp)
+# ============================================================
+backend:
+  name: github
+  repo: THAY-TEN-TAI-KHOAN/THAY-TEN-KHO   # <-- SỬA DÒNG NÀY
+  branch: main
+  commit_messages:
+    create: "Thêm {{collection}}: {{slug}}"
+    update: "Cập nhật {{collection}}: {{slug}}"
+    delete: "Xoá {{collection}}: {{slug}}"
+    uploadMedia: "Tải ảnh lên: {{path}}"
+    deleteMedia: "Xoá ảnh: {{path}}"
+
+site_url: /
+display_url: /
+media_folder: "images/uploads"
+public_folder: "images/uploads"
+
+collections:
+  - name: "tuyendung"
+    label: "📋 Tin tuyển dụng"
+    files:
+      - file: "content/jobs.json"
+        name: "jobs"
+        label: "Danh sách vị trí tuyển dụng"
+        fields:
+          - name: "jobs"
+            label: "Các vị trí"
+            label_singular: "vị trí"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.salary}}"
+            fields:
+              - { name: "title", label: "Tên vị trí", widget: "string" }
+              - { name: "tag", label: "Nhãn (VD: Tuyển gấp, Marketing, Kỹ thuật...)", widget: "string", default: "Việc làm" }
+              - { name: "hot", label: "Tin nổi bật (nhãn cam)", widget: "boolean", default: false, required: false }
+              - { name: "loc", label: "Địa điểm làm việc", widget: "string" }
+              - { name: "salary", label: "Mức lương (VD: 10 – 20 triệu/tháng)", widget: "string" }
+              - { name: "time", label: "Thời gian làm việc / số lượng tuyển", widget: "string" }
+              - name: "mota"
+                label: "Mô tả công việc (mỗi dòng 1 ý)"
+                widget: "list"
+                field: { name: "item", label: "Ý", widget: "string" }
+              - name: "yeucau"
+                label: "Yêu cầu ứng viên (mỗi dòng 1 ý)"
+                widget: "list"
+                field: { name: "item", label: "Ý", widget: "string" }
+              - name: "quyenloi"
+                label: "Quyền lợi & Thu nhập (mỗi dòng 1 ý)"
+                widget: "list"
+                field: { name: "item", label: "Ý", widget: "string" }
+
+  - name: "hoatdong"
+    label: "📰 Bài viết hoạt động"
+    files:
+      - file: "content/news.json"
+        name: "articles"
+        label: "Danh sách bài viết"
+        fields:
+          - name: "articles"
+            label: "Các bài viết"
+            label_singular: "bài viết"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { name: "title", label: "Tiêu đề bài viết", widget: "string" }
+              - { name: "label", label: "Chú thích ngắn (hiện trên ảnh trang chủ)", widget: "string" }
+              - { name: "image", label: "Ảnh đại diện", widget: "image" }
+              - name: "photos"
+                label: "Bộ ảnh trong bài (ảnh đầu tiên nên trùng ảnh đại diện)"
+                widget: "list"
+                field: { name: "photo", label: "Ảnh", widget: "image" }
+              - name: "body"
+                label: "Nội dung bài (mỗi ô 1 đoạn văn)"
+                widget: "list"
+                field: { name: "paragraph", label: "Đoạn văn", widget: "text" }
+
+  - name: "caidat"
+    label: "⚙️ Thông tin liên hệ"
+    files:
+      - file: "content/settings.json"
+        name: "settings"
+        label: "Thông tin liên hệ & footer"
+        fields:
+          - { name: "phone", label: "Số điện thoại (hiển thị, VD: 0915.67.67.64)", widget: "string" }
+          - { name: "phone_raw", label: "Số điện thoại (để bấm gọi, chỉ số, VD: 0915676764)", widget: "string" }
+          - { name: "email", label: "Email tuyển dụng", widget: "string" }
+          - { name: "address_hcm", label: "Địa chỉ trụ sở TP.HCM", widget: "string" }
+          - { name: "address_dn", label: "Địa chỉ chi nhánh Đà Nẵng", widget: "string" }
+          - { name: "hours", label: "Giờ làm việc", widget: "string" }

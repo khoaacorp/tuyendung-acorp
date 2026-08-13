@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuyển dụng Acorp - Cùng nhau kiến tạo tương lai</title>
+<style>
+  :root{
+    --blue-900:#0d2c54;
+    --blue-800:#123a6d;
+    --blue-600:#1b5fae;
+    --blue-500:#2472c8;
+    --blue-100:#e8f0fb;
+    --amber:#f5a623;
+    --text:#2b3440;
+    --muted:#64707d;
+    --bg:#ffffff;
+    --bg-soft:#f5f8fc;
+    --radius:14px;
+    --shadow:0 6px 24px rgba(13,44,84,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+  img{max-width:100%;display:block}
+  a{text-decoration:none;color:inherit}
+  .container{max-width:1140px;margin:0 auto;padding:0 20px}
+  .section{padding:72px 0}
+  .section-title{text-align:center;font-size:32px;font-weight:800;color:var(--blue-900);text-transform:uppercase;letter-spacing:.5px}
+  .section-title::after{content:"";display:block;width:64px;height:4px;background:var(--amber);margin:14px auto 0;border-radius:2px}
+  .section-sub{text-align:center;color:var(--muted);max-width:640px;margin:16px auto 0;font-size:16px}
+
+  /* ===== Header ===== */
+  header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 12px rgba(13,44,84,.10)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .logo{display:flex;align-items:center;gap:10px;font-size:26px;font-weight:900;color:var(--blue-900)}
+  .logo .mark{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--blue-600),var(--blue-900));color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px}
+  .logo span b{color:var(--amber)}
+  .menu{display:flex;gap:28px;list-style:none;font-weight:600;font-size:15px}
+  .menu a{color:var(--blue-900);padding:8px 2px;position:relative}
+  .menu a:hover{color:var(--blue-500)}
+  .menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--amber);transition:.25s}
+  .menu a:hover::after{width:100%}
+  .btn{display:inline-block;padding:12px 26px;border-radius:999px;font-weight:700;font-size:15px;transition:.25s;cursor:pointer;border:none}
+  .btn-primary{background:var(--amber);color:#fff;box-shadow:0 6px 18px rgba(245,166,35,.4)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(245,166,35,.5)}
+  .btn-outline{border:2px solid #fff;color:#fff}
+  .btn-outline:hover{background:#fff;color:var(--blue-900)}
+  .hamburger{display:none;font-size:26px;background:none;border:none;color:var(--blue-900);cursor:pointer}
+  .btn-admin{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--muted);border:1.5px solid #e3eaf3;padding:8px 13px;border-radius:999px;margin-left:10px;transition:.25s;cursor:pointer;white-space:nowrap}
+  .btn-admin:hover{color:#fff;background:var(--blue-600);border-color:var(--blue-600)}
+  .menu-mobile-only{display:none}
+  @media(max-width:900px){.btn-admin{display:none}.menu-mobile-only{display:list-item}}
+
+  /* ===== Hero ===== */
+  .hero{background:
+    linear-gradient(120deg,rgba(13,44,84,.93) 0%,rgba(27,95,174,.88) 70%,rgba(46,134,217,.85) 100%),
+    url('images/uploads/dai-gia-dinh-acorp.jpg') center/cover no-repeat,
+    linear-gradient(120deg,var(--blue-900) 0%,var(--blue-600) 70%,#2e86d9 100%);
+    color:#fff;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.06)}
+  .hero::after{content:"";position:absolute;right:60px;bottom:-160px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.05)}
+  .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:88px 0}
+  .hero h1{font-size:44px;line-height:1.2;font-weight:900}
+  .hero h1 em{font-style:normal;color:var(--amber)}
+  .hero p{margin:20px 0 30px;font-size:18px;color:#dbe7f7;max-width:520px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:36px;margin-top:42px;flex-wrap:wrap}
+  .stat b{display:block;font-size:30px;color:var(--amber)}
+  .stat span{font-size:14px;color:#c9d9ee}
+  .hero-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(6px);border-radius:20px;padding:28px;z-index:1}
+  .hero-card h3{font-size:17px;margin-bottom:16px;color:#fff}
+  .brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .brand{background:#fff;border-radius:12px;padding:16px 12px;text-align:center;color:var(--blue-900);font-weight:800;font-size:18px}
+  .brand small{display:block;font-weight:500;color:var(--muted);font-size:12px;margin-top:2px}
+
+  /* ===== Intro ===== */
+  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:48px}
+  .intro-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3;background:
+    linear-gradient(rgba(13,44,84,.25),rgba(13,44,84,.25)),
+    repeating-linear-gradient(45deg,#cfe0f4 0 24px,#bcd3ef 24px 48px)}
+  .intro-img .ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;text-shadow:0 2px 8px rgba(0,0,0,.35)}
+  .intro-img img,.g-item img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
+  .intro-img{position:relative}
+  .intro-img img{position:absolute;inset:0}
+  .g-item{position:relative;overflow:hidden}
+  .g-item img{position:absolute;inset:0;z-index:0}
+  .g-item span{position:relative;z-index:1}
+  .g-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,33,64,.65));z-index:0}
+  .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+  .intro-text h3{font-size:24px;color:var(--blue-900);margin-bottom:16px}
+  .intro-text p{color:var(--muted);margin-bottom:14px;font-size:16px}
+  .intro-text .btn{margin-top:8px}
+  .btn-blue{background:var(--blue-600);color:#fff}
+  .btn-blue:hover{background:var(--blue-900)}
+
+  /* ===== Values ===== */
+  .values{background:var(--bg-soft)}
+  .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+  .value-card{background:#fff;border-radius:var(--radius);padding:36px 28px;text-align:center;box-shadow:var(--shadow);transition:.25s;border-top:4px solid transparent}
+  .value-card:hover{transform:translateY(-6px);border-top-color:var(--amber)}
+  .value-icon{width:70px;height:70px;margin:0 auto 20px;border-radius:50%;background:var(--blue-100);display:flex;align-items:center;justify-content:center;font-size:32px}
+  .value-card h3{color:var(--blue-900);font-size:19px;margin-bottom:10px}
+  .value-card p{color:var(--muted);font-size:15px}
+
+  /* ===== Jobs ===== */
+  .job-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .job-card{background:#fff;border:1px solid #e3eaf3;border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px;transition:.25s}
+  .job-card:hover{box-shadow:var(--shadow);transform:translateY(-4px);border-color:var(--blue-500)}
+  .job-tag{align-self:flex-start;background:var(--blue-100);color:var(--blue-600);font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;text-transform:uppercase}
+  .job-tag.hot{background:#fdeeda;color:#d9820b}
+  .job-card h3{font-size:17px;color:var(--blue-900);min-height:44px}
+  .job-meta{font-size:14px;color:var(--muted)}
+  .job-meta div{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+  .job-salary{font-weight:800;color:var(--blue-600)}
+  .job-card .apply{margin-top:auto;padding-top:12px;border-top:1px dashed #e3eaf3;display:flex;justify-content:space-between;align-items:center}
+  .apply a{color:var(--amber);font-weight:700;font-size:14px}
+  .apply a:hover{text-decoration:underline}
+  .jobs-more{text-align:center;margin-top:40px}
+
+  /* ===== Gallery ===== */
+  .gallery{background:var(--bg-soft)}
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:14px;margin-top:48px}
+  .g-item{border-radius:12px;display:flex;align-items:flex-end;padding:14px;color:#fff;font-weight:600;font-size:14px;text-shadow:0 2px 6px rgba(0,0,0,.4);transition:.25s}
+  .g-item:hover{transform:scale(1.02)}
+  .g-item.tall{grid-row:span 2}
+  .g1{background:linear-gradient(160deg,#1b5fae,#0d2c54)}
+  .g2{background:linear-gradient(160deg,#f5a623,#d9820b)}
+  .g3{background:linear-gradient(160deg,#2e86d9,#123a6d)}
+  .g4{background:linear-gradient(160deg,#5b8fc9,#2b5c96)}
+  .g5{background:linear-gradient(160deg,#123a6d,#2472c8)}
+  .g6{background:linear-gradient(160deg,#e8a53c,#b5741a)}
+  .g7{background:linear-gradient(160deg,#3d7cc0,#0d2c54)}
+
+  /* ===== Testimonials ===== */
+  .testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
+  .testi{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);position:relative}
+  .testi::before{content:"\201C";position:absolute;top:8px;left:20px;font-size:70px;color:var(--blue-100);font-family:Georgia,serif;line-height:1}
+  .testi p{position:relative;color:var(--text);font-size:15px;font-style:italic;margin-bottom:18px}
+  .testi-author{display:flex;align-items:center;gap:14px}
+  .avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--blue-500),var(--blue-900));color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:17px;position:relative;overflow:hidden;flex-shrink:0}
+  .avatar img{position:absolute;inset:0}
+  .testi-author b{display:block;color:var(--blue-900);font-size:15px}
+  .testi-author span{font-size:13px;color:var(--muted)}
+
+  /* ===== CTA banner ===== */
+  .cta-banner{background:linear-gradient(120deg,var(--blue-900),var(--blue-600));color:#fff;text-align:center;padding:64px 20px}
+  .cta-banner h2{font-size:30px;font-weight:900;margin-bottom:12px}
+  .cta-banner p{color:#d7e4f5;margin-bottom:26px;font-size:17px}
+
+  /* ===== Footer ===== */
+  footer{background:#0a2140;color:#b9c9de;font-size:14px}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:40px;padding:64px 0 44px}
+  footer h4{color:#fff;font-size:16px;margin-bottom:18px;text-transform:uppercase;letter-spacing:.5px}
+  footer p{margin-bottom:12px}
+  .footer-links{list-style:none}
+  .footer-links li{margin-bottom:10px}
+  .footer-links a:hover{color:var(--amber)}
+  .f-contact div{display:flex;gap:10px;margin-bottom:12px}
+  .subscribe input{width:100%;padding:12px 16px;border-radius:10px;border:none;margin-bottom:12px;font-size:14px;background:#12315a;color:#fff}
+  .subscribe input::placeholder{color:#7f95b3}
+  .subscribe .btn{width:100%}
+  .socials{display:flex;gap:12px;margin-top:16px}
+  .socials a{width:38px;height:38px;border-radius:50%;background:#12315a;display:flex;align-items:center;justify-content:center;font-size:16px;transition:.25s}
+  .socials a:hover{background:var(--amber);color:#fff}
+  .copyright{border-top:1px solid #12315a;text-align:center;padding:20px;font-size:13px;color:#7f95b3}
+
+  /* ===== Trang chi tiết ===== */
+  body.detail-open #mainSite{display:none}
+  .detail-page{display:none;padding:48px 0 72px;background:var(--bg-soft);min-height:60vh}
+  body.detail-open .detail-page{display:block}
+  .detail-card{max-width:840px;margin:0 auto;background:#fff;border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+  .detail-hero{width:100%;max-height:380px;object-fit:cover;display:block}
+  .detail-body{padding:36px 40px 44px}
+  .detail-body h1{font-size:28px;color:var(--blue-900);line-height:1.3;margin-bottom:14px}
+  .detail-meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+  .chip{background:var(--blue-100);color:var(--blue-600);font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px}
+  .chip.salary{background:#fdeeda;color:#d9820b}
+  .detail-body h4{color:var(--blue-900);font-size:18px;margin:26px 0 10px;padding-left:12px;border-left:4px solid var(--amber)}
+  .detail-body ul{margin:0 0 6px 22px;color:var(--text)}
+  .detail-body li{margin-bottom:7px;font-size:15px}
+  .detail-body p{color:var(--text);font-size:15px;margin-bottom:12px}
+  .detail-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+  .back-btn{background:none;border:none;color:var(--blue-600);font-weight:700;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;margin:0 auto 18px;max-width:840px;display:block}
+  .back-btn:hover{color:var(--blue-900)}
+  .g-item{cursor:pointer}
+  .detail-link{color:var(--blue-600);font-weight:700;font-size:13px;cursor:pointer}
+  .detail-link:hover{text-decoration:underline}
+  /* Trang danh sách */
+  .list-item{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 0;border-bottom:1px solid #eef2f7;flex-wrap:wrap}
+  .list-item b{color:var(--blue-900);font-size:16px;display:block;margin-bottom:4px}
+  .list-item .job-meta{font-size:14px}
+  .list-actions{display:flex;gap:16px;align-items:center;flex-shrink:0}
+  .news-item{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid #eef2f7;cursor:pointer;align-items:center}
+  .news-item img{width:150px;height:96px;object-fit:cover;border-radius:10px;flex-shrink:0}
+  .news-item b{color:var(--blue-900);font-size:17px;display:block;margin-bottom:6px}
+  .news-item:hover b{color:var(--blue-600)}
+  .news-item p{color:var(--muted);font-size:14px;margin:0}
+  .page-img{width:100%;border-radius:12px;margin:18px 0}
+  .contact-row{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;font-size:15px}
+  @media(max-width:600px){.news-item img{width:100px;height:70px}}
+  @media(max-width:600px){.detail-body{padding:24px 18px 32px}.detail-body h1{font-size:22px}}
+
+  /* ===== Modal Nộp hồ sơ ===== */
+  .modal-overlay{position:fixed;inset:0;background:rgba(10,25,47,.65);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+  .modal-overlay.open{display:flex}
+  .modal{background:#fff;border-radius:16px;max-width:560px;width:100%;max-height:90vh;overflow-y:auto;padding:32px;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.3)}
+  .modal h3{color:var(--blue-900);font-size:22px;margin-bottom:6px}
+  .modal .note{font-size:13px;color:var(--muted);margin-bottom:20px}
+  .modal-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:26px;color:var(--muted);cursor:pointer;line-height:1}
+  .modal-close:hover{color:var(--blue-900)}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .form-grid .full{grid-column:1/-1}
+  .field label{display:block;font-size:13px;font-weight:700;color:var(--blue-900);margin-bottom:5px}
+  .field label em{color:#e0433f;font-style:normal}
+  .field input,.field select{width:100%;padding:11px 13px;border:1.5px solid #dde6f0;border-radius:10px;font-size:14px;font-family:inherit;background:#fff;color:var(--text)}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--blue-500)}
+  .field input[type=file]{padding:9px;background:var(--bg-soft)}
+  .modal-actions{display:flex;gap:12px;margin-top:20px}
+  .modal-actions .btn{flex:1;text-align:center}
+  .btn-ghost{background:#eef2f7;color:var(--muted)}
+  .btn-ghost:hover{background:#e1e8f0}
+  .apply-btn{color:var(--amber);font-weight:700;font-size:14px;cursor:pointer}
+  .apply-btn:hover{text-decoration:underline}
+  @media(max-width:560px){.form-grid{grid-template-columns:1fr}.modal{padding:24px 18px}}
+
+  /* ===== Responsive ===== */
+  @media(max-width:900px){
+    .hero-inner{grid-template-columns:1fr;padding:56px 0}
+    .hero h1{font-size:32px}
+    .intro-grid{grid-template-columns:1fr;gap:32px}
+    .value-grid{grid-template-columns:1fr}
+    .job-grid{grid-template-columns:1fr 1fr}
+    .gallery-grid{grid-template-columns:1fr 1fr}
+    .testi-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr 1fr}
+    .menu{position:fixed;inset:70px 0 auto 0;background:#fff;flex-direction:column;gap:0;padding:10px 20px 20px;box-shadow:0 12px 24px rgba(13,44,84,.15);display:none}
+    .menu.open{display:flex}
+    .menu li{padding:10px 0;border-bottom:1px solid #eef2f7}
+    .hamburger{display:block}
+    .nav .btn{display:none}
+  }
+  @media(max-width:560px){
+    .job-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr}
+    .section{padding:52px 0}
+    .section-title{font-size:26px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="container nav">
+    <a href="#top" class="logo"><img src="https://tuyendung.acorp.vn/images/logoac.jpg" alt="Acorp" style="height:44px;width:auto" onerror="this.remove();document.querySelectorAll('.logo [hidden]').forEach(function(e){e.hidden=false})"><span class="mark" hidden>A</span><span hidden>AC<b>O</b>RP</span></a>
+    <ul class="menu" id="menu">
+      <li><a href="#top">Trang chủ</a></li>
+      <li><a onclick="openPage('about')" style="cursor:pointer">Về Acorp</a></li>
+      <li><a onclick="openPage('jobs')" style="cursor:pointer">Việc làm</a></li>
+      <li><a onclick="openPage('news')" style="cursor:pointer">Hoạt động</a></li>
+      <li><a onclick="openPage('camnhan')" style="cursor:pointer">Cảm nhận</a></li>
+      <li><a onclick="openPage('lienhe')" style="cursor:pointer">Liên hệ</a></li>
+      <li class="menu-mobile-only"><a onclick="openApply()" style="color:var(--amber);cursor:pointer">Nộp Hồ Sơ (CV)</a></li>
+      <li class="menu-mobile-only"><a href="admin/" style="color:var(--muted);cursor:pointer">⚙️ Quản trị</a></li>
+    </ul>
+    <a onclick="openApply()" class="btn btn-primary" style="cursor:pointer">Nộp Hồ Sơ (CV)</a>
+    <a class="btn-admin" href="admin/" title="Đăng nhập quản trị nội dung">⚙️ <span>Quản trị</span></a>
+    <button class="hamburger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<main id="mainSite">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="container hero-inner">
+    <div>
+      <h1>Cùng Acorp <em>kiến tạo tương lai</em> của chính bạn</h1>
+      <p>Gia nhập đội ngũ trẻ trung, năng động của Công ty Cổ phần Đầu tư Acorp — nơi bạn được trao cơ hội học hỏi, phát triển nhanh và trở thành nhà quản lý, lãnh đạo tương lai.</p>
+      <div class="hero-cta">
+        <a href="#viec-lam" class="btn btn-primary">Xem vị trí đang tuyển</a>
+        <a href="#gioi-thieu" class="btn btn-outline">Tìm hiểu về Acorp</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>17+</b><span>Vị trí đang tuyển</span></div>
+        <div class="stat"><b>4</b><span>Đơn vị thành viên</span></div>
+        <div class="stat"><b>3</b><span>Khu vực: HN – ĐN – HCM</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Hệ sinh thái Acorp</h3>
+      <div class="brand-grid">
+        <div class="brand">Adoor<small>Cửa & Nội thất</small></div>
+        <div class="brand">Aguru<small>Đào tạo</small></div>
+        <div class="brand">Acity<small>Bất động sản</small></div>
+        <div class="brand">Adigital<small>Marketing số</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GIỚI THIỆU ================= -->
+<section class="section" id="gioi-thieu">
+  <div class="container">
+    <h2 class="section-title">Giới thiệu</h2>
+    <div class="intro-grid">
+      <div class="intro-img"><div class="ph">Hình ảnh văn phòng Acorp</div><img src="images/uploads/su-kien-20-10.png" alt="Đội ngũ Acorp" onerror="this.remove()"></div>
+      <div class="intro-text">
+        <h3>Khát vọng trở thành tập đoàn hạng A</h3>
+        <p>Công ty Cổ phần Đầu tư Acorp được thành lập với khát vọng trở thành tập đoàn hạng A; hoạt động như một quỹ đầu tư bằng cách thu hút vốn bên ngoài để thực hiện cấp vốn, điều hành các đơn vị thành viên và các dự án.</p>
+        <p>Với hệ sinh thái đa ngành gồm Adoor, Aguru, Acity và Adigital, Acorp mang đến môi trường làm việc thân thiện, yêu thương, kết nối — nơi mỗi thành viên đều có cơ hội phát triển chính mình.</p>
+        <a href="#viec-lam" class="btn btn-blue">Xem thêm »</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GIÁ TRỊ CỐT LÕI ================= -->
+<section class="section values">
+  <div class="container">
+    <h2 class="section-title">Vì sao chọn Acorp?</h2>
+    <p class="section-sub">Ba giá trị mà Acorp cam kết mang đến cho mỗi thành viên trong đại gia đình</p>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3>Môi trường mong ước</h3>
+        <p>Thân thiện, yêu thương và kết nối là những gì Acorp mang đến cho bạn mỗi ngày làm việc.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📈</div>
+        <h3>Phát triển chính mình</h3>
+        <p>Được tham gia các chương trình đào tạo nội bộ và chuyên môn, nâng cấp bản thân liên tục.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🚀</div>
+        <h3>Cơ hội nghề nghiệp</h3>
+        <p>Cơ hội học hỏi, phát triển nhanh và trở thành nhà quản lý, nhà lãnh đạo tương lai.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIỆC LÀM ================= -->
+<section class="section" id="viec-lam">
+  <div class="container">
+    <h2 class="section-title">Việc làm nổi bật</h2>
+    <p class="section-sub">Các vị trí đang tuyển dụng trên toàn hệ thống Acorp</p>
+    <div class="job-grid">
+      <div class="job-card">
+        <span class="job-tag hot">Tuyển gấp</span>
+        <h3>Đại Diện Kinh Doanh</h3>
+        <div class="job-meta">
+          <div>📍 Hà Nội, Đà Nẵng, TP.HCM</div>
+          <div>💰 <span class="job-salary">Thu nhập cạnh tranh</span></div>
+        </div>
+        <div class="apply"><a class="detail-link" onclick="openJob(this)">Xem chi tiết »</a><a class="apply-btn" onclick="openApply(this)">Nộp Hồ Sơ (CV) »</a></div>
+      </div>
+      <div class="job-card">
+        <span class="job-tag">Kỹ thuật</span>
+        <h3>QS / Nhân Viên Dự Toán Nội Thất</h3>
+        <div class="job-meta">
+          <div>📍 Thủ Đức, TP.HCM</div>
+          <div>💰 <span class="job-salary">Lên đến 20 triệu/tháng</span></div>
+        </div>
+        <div class="apply"><a class="detail-link" onclick="openJob(this)">Xem chi tiết »</a><a class="apply-btn" onclick="openApply(this)">Nộp Hồ Sơ (CV) »</a></div>
+      </div>
+      <div class="job-card">
+        <span class="job-tag">Marketing</span>
+        <h3>Trợ Lý Marketing</h3>
+        <div class="job-meta">
+          <div>📍 Vinhomes Grand Park, TP.HCM</div>
+          <div>💰 <span class="job-salary">10 – 20 triệu/tháng</span></div>
+        </div>
+        <div class="apply"><a class="detail-link" onclick="openJob(this)">Xem chi tiết »</a><a class="apply-btn" onclick="openApply(this)">Nộp Hồ Sơ (CV) »</a></div>
+      </div>
+      <div class="job-card">
+        <span class="job-tag hot">Tuyển gấp</span>
+        <h3>Trợ Lý Kinh Doanh (Sales Assistant)</h3>
+        <div class="job-meta">
+          <div>📍 TP.HCM</div>
+          <div>💰 <span class="job-salary">15 – 30 triệu/tháng</span></div>
+        </div>
+        <div class="apply"><a class="detail-link" onclick="openJob(this)">Xem chi tiết »</a><a class="apply-btn" onclick="openApply(this)">Nộp Hồ Sơ (CV) »</a></div>
+      </div>
+      <div class="job-card">
+        <span class="job-tag">Văn phòng</span>
+        <h3>Trợ Lý Giám Đốc</h3>
+        <div class="job-meta">
+          <div>📍 Vinhomes Grand Park, Thủ Đức</div>
+          <div>💰 <span class="job-salary">10 – 18 triệu/tháng</span></div>
+        </div>
+        <div class="apply"><a class="detail-link" onclick="openJob(this)">Xem chi tiết »</a><a class="apply-btn" onclick="openApply(this)">Nộp Hồ Sơ (CV) »</a></div>
+      </div>
+      <div class="job-card">
+        <span class="job-tag">Marketing</span>
+        <h3>Chuyên Viên Digital Marketing</h3>
+        <div class="job-meta">
+          <div>📍 Vinhomes Grand Park, TP.HCM</div>
+          <div>💰 <span class="job-salary">10 – 15 triệu/tháng</span></div>
+        </div>
+        <div class="apply"><a class="detail-link" onclick="openJob(this)">Xem chi tiết »</a><a class="apply-btn" onclick="openApply(this)">Nộp Hồ Sơ (CV) »</a></div>
+      </div>
+      <div class="job-card">
+        <span class="job-tag">Marketing</span>
+        <h3>Nhân Viên Content SEO</h3>
+        <div class="job-meta">
+          <div>📍 Hải Châu, Đà Nẵng</div>
+          <div>💰 <span class="job-salary">7 – 9 triệu/tháng</span></div>
+        </div>
+        <div class="apply"><a class="detail-link" onclick="openJob(this)">Xem chi tiết »</a><a class="apply-btn" onclick="openApply(this)">Nộp Hồ Sơ (CV) »</a></div>
+      </div>
+      <div class="job-card">
+        <span class="job-tag hot">Thu nhập cao</span>
+        <h3>Trưởng Team Kinh Doanh (Nội Thất)</h3>
+        <div class="job-meta">
+          <div>📍 TP.HCM</div>
+          <div>💰 <span class="job-salary">25 – 50 triệu++/tháng</span></div>
+        </div>
+        <div class="apply"><a class="detail-link" onclick="openJob(this)">Xem chi tiết »</a><a class="apply-btn" onclick="openApply(this)">Nộp Hồ Sơ (CV) »</a></div>
+      </div>
+      <div class="job-card">
+        <span class="job-tag">Văn phòng</span>
+        <h3>Sale Admin · Kế Toán Bán Hàng</h3>
+        <div class="job-meta">
+          <div>📍 Hải Châu, Đà Nẵng</div>
+          <div>💰 <span class="job-salary">7 triệu + 1% doanh số</span></div>
+        </div>
+        <div class="apply"><a class="detail-link" onclick="openJob(this)">Xem chi tiết »</a><a class="apply-btn" onclick="openApply(this)">Nộp Hồ Sơ (CV) »</a></div>
+      </div>
+    </div>
+    <div class="jobs-more"><a href="#lien-he" class="btn btn-blue">Xem tất cả 17+ vị trí »</a></div>
+  </div>
+</section>
+
+<!-- ================= HOẠT ĐỘNG ================= -->
+<section class="section gallery" id="hoat-dong">
+  <div class="container">
+    <h2 class="section-title">Hình ảnh hoạt động</h2>
+    <p class="section-sub">Khoảnh khắc đời thường của đại gia đình Acorp</p>
+    <div class="gallery-grid">
+      <div class="g-item tall g1" onclick="openNews('sinhvien',this)"><img src="images/uploads/vinh-danh-tang-qua.jpg" alt="" onerror="this.remove()"><span>Vinh danh & tặng quà</span></div>
+      <div class="g-item g2" onclick="openNews('daotao',this)"><img src="images/uploads/dao-tao-noi-bo-1.jpg" alt="" onerror="this.remove()"><span>Đào tạo nội bộ</span></div>
+      <div class="g-item g3" onclick="openNews('sinhvien',this)"><img src="images/uploads/su-kien-tan-sinh-vien.jpg" alt="" onerror="this.remove()"><span>Sự kiện & talkshow</span></div>
+      <div class="g-item g4" onclick="openNews('kyket',this)"><img src="images/uploads/le-ky-ket-hop-tac.jpg" alt="" onerror="this.remove()"><span>Lễ ký kết hợp tác</span></div>
+      <div class="g-item g5" onclick="openNews('daotao',this)"><img src="images/uploads/khong-gian-lam-viec.jpg" alt="" onerror="this.remove()"><span>Không gian làm việc</span></div>
+      <div class="g-item g6" onclick="openNews('sinhvien',this)"><img src="images/uploads/giao-luu-sinh-vien.jpg" alt="" onerror="this.remove()"><span>Giao lưu sinh viên</span></div>
+      <div class="g-item tall g7" style="grid-row:auto" onclick="openNews('daotao',this)"><img src="images/uploads/hop-toan-cong-ty.jpg" alt="" onerror="this.remove()"><span>Họp toàn công ty</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CẢM NHẬN ================= -->
+<section class="section" id="cam-nhan">
+  <div class="container">
+    <h2 class="section-title">Cảm nhận của nhân viên</h2>
+    <p class="section-sub">Confession — những chia sẻ thật từ chính người Acorp</p>
+    <div class="testi-grid">
+      <div class="testi">
+        <p>"Người thợ đi làm cũng đơn giản thôi, miễn sao môi trường thích hợp thì bản thân sẽ gắn bó lâu dài..."</p>
+        <div class="testi-author">
+          <div class="avatar">TS<img src="https://tuyendung.acorp.vn/uploads/article/cf-cf3-1579249160.jpg" alt="" onerror="this.remove()"></div>
+          <div><b>Thế Sơn</b><span>Nhân viên kỹ thuật Adoor</span></div>
+        </div>
+      </div>
+      <div class="testi">
+        <p>"Hãy cứ đến Adoor đi. Bạn sẽ không có thời gian để mà buồn — môi trường năng động và đồng đội luôn hỗ trợ hết mình."</p>
+        <div class="testi-author">
+          <div class="avatar">NT<img src="https://tuyendung.acorp.vn/uploads/article/cf-cf4-1579249169.jpg" alt="" onerror="this.remove()"></div>
+          <div><b>Nhật Tín</b><span>Trưởng nhóm CSKH</span></div>
+        </div>
+      </div>
+      <div class="testi">
+        <p>"Cùng nhau – chúng ta sẽ khắc phục từng khó khăn, để mỗi ngày đi làm là một ngày tiến bộ hơn."</p>
+        <div class="testi-author">
+          <div class="avatar">CT<img src="https://tuyendung.acorp.vn/uploads/article/cf-cf2-1579249185.jpg" alt="" onerror="this.remove()"></div>
+          <div><b>Công Trung</b><span>Quản đốc xưởng</span></div>
+        </div>
+      </div>
+      <div class="testi">
+        <p>"Chính Adoor đã một tay rèn giũa để có được một Ân bản lĩnh và trưởng thành như hôm nay."</p>
+        <div class="testi-author">
+          <div class="avatar">HA<img src="https://tuyendung.acorp.vn/uploads/article/cf-cf1-1579249196.jpg" alt="" onerror="this.remove()"></div>
+          <div><b>Hồng Ân</b><span>Trợ lý kế hoạch</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-banner">
+  <h2>Sẵn sàng gia nhập đại gia đình Acorp?</h2>
+  <p>Gửi hồ sơ ngay hôm nay — đội ngũ tuyển dụng sẽ liên hệ với bạn trong 24 giờ làm việc.</p>
+  <a onclick="openApply()" class="btn btn-primary" style="cursor:pointer">Nộp Hồ Sơ (CV) ngay</a>
+</section>
+
+</main>
+
+<!-- ================= TRANG CHI TIẾT ================= -->
+<section class="detail-page" id="detailPage">
+  <div class="container">
+    <button class="back-btn" onclick="closeDetail()">« Quay lại trang chủ</button>
+    <div class="detail-card" id="detailCard"></div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="lien-he">
+  <div class="container footer-grid">
+    <div>
+      <h4>Về chúng tôi</h4>
+      <p>Công ty Cổ phần Đầu tư Acorp được thành lập với khát vọng trở thành tập đoàn hạng A; hoạt động như một quỹ đầu tư, điều hành các đơn vị thành viên và các dự án.</p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Youtube">▶</a>
+        <a href="#" aria-label="TikTok">♪</a>
+      </div>
+    </div>
+    <div>
+      <h4>Liên kết nhanh</h4>
+      <ul class="footer-links">
+        <li><a href="#top" onclick="closeDetail()">Trang chủ</a></li>
+        <li><a onclick="openPage('about')" style="cursor:pointer">Về Acorp</a></li>
+        <li><a onclick="openPage('jobs')" style="cursor:pointer">Việc làm</a></li>
+        <li><a onclick="openPage('news')" style="cursor:pointer">Hoạt động</a></li>
+      </ul>
+    </div>
+    <div class="f-contact">
+      <h4>Liên hệ</h4>
+      <div>📍 <span id="f-addr">Khu đô thị Vinhomes Grand Park, TP. Thủ Đức, TP. Hồ Chí Minh</span></div>
+      <div>📞 <a id="f-phone" href="tel:0915676764">0915.67.67.64</a></div>
+      <div>✉️ <a id="f-email" href="mailto:tuyendung.acorp@gmail.com">tuyendung.acorp@gmail.com</a></div>
+    </div>
+    <div class="subscribe">
+      <h4>Nhận thông tin việc làm</h4>
+      <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Đã đăng ký ✓';">
+        <input type="text" placeholder="Họ và tên" required>
+        <input type="email" placeholder="Email của bạn" required>
+        <button class="btn btn-primary" type="submit">Đăng ký</button>
+      </form>
+    </div>
+  </div>
+  <div class="copyright">© 2026 Công ty Cổ phần Đầu tư Acorp. All rights reserved.</div>
+</footer>
+
+<!-- ================= MODAL NỘP HỒ SƠ ================= -->
+<div class="modal-overlay" id="applyModal" onclick="if(event.target===this)closeApply()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeApply()" aria-label="Đóng">×</button>
+    <h3>Nộp Hồ Sơ Ứng Tuyển</h3>
+    <p class="note">Điền thông tin và đính kèm CV (PDF, DOC, DOCX). Hồ sơ sẽ được gửi về bộ phận tuyển dụng Acorp.</p>
+    <form id="applyForm" action="https://formsubmit.co/tuyendung.acorp@gmail.com" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="[Tuyển dụng Acorp] Hồ sơ ứng tuyển mới">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <div class="form-grid">
+        <div class="field"><label>Họ và tên <em>*</em></label><input type="text" name="Họ và tên" required placeholder="Nguyễn Văn A"></div>
+        <div class="field"><label>Ngày sinh <em>*</em></label><input type="date" name="Ngày sinh" required></div>
+        <div class="field"><label>Số điện thoại <em>*</em></label><input type="tel" name="Số điện thoại" required placeholder="09xx xxx xxx"></div>
+        <div class="field"><label>Email <em>*</em></label><input type="email" name="Email" required placeholder="email@gmail.com"></div>
+        <div class="field"><label>Địa điểm làm việc <em>*</em></label>
+          <select name="Địa điểm làm việc" required>
+            <option value="">— Chọn địa điểm —</option>
+            <option>TP. Hồ Chí Minh</option>
+            <option>Hà Nội</option>
+            <option>Đà Nẵng</option>
+          </select>
+        </div>
+        <div class="field"><label>Công ty ứng tuyển <em>*</em></label>
+          <select name="Công ty ứng tuyển" required>
+            <option value="">— Chọn công ty —</option>
+            <option>Acorp</option>
+            <option>Adoor</option>
+            <option>Aguru</option>
+            <option>Acity</option>
+            <option>Adigital</option>
+          </select>
+        </div>
+        <div class="field full"><label>Bộ phận ứng tuyển <em>*</em></label>
+          <select name="Bộ phận ứng tuyển" required>
+            <option value="">— Chọn bộ phận —</option>
+            <option>Phòng Kinh doanh</option>
+            <option>Phòng Marketing</option>
+            <option>Phòng CSKH</option>
+            <option>Phòng Triển khai</option>
+            <option>Kế toán</option>
+            <option>Nhân sự</option>
+            <option>Kỹ thuật / Xưởng</option>
+            <option>Thực tập sinh</option>
+            <option>Lái xe</option>
+            <option>Tạp vụ</option>
+            <option>Khác</option>
+          </select>
+        </div>
+        <div class="field full"><label>Vị trí ứng tuyển <em>*</em></label><input type="text" name="Vị trí ứng tuyển" id="viTri" required placeholder="VD: Trợ Lý Marketing"></div>
+        <div class="field full"><label>Hồ sơ của bạn (CV) <em>*</em></label><input type="file" name="attachment" accept=".pdf,.doc,.docx" required></div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" onclick="closeApply()">Hủy</button>
+        <button type="submit" class="btn btn-primary">Gửi hồ sơ</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  /* ================= DỮ LIỆU CHI TIẾT TUYỂN DỤNG ================= */
+  var JOBS = {
+  "Đại Diện Kinh Doanh": {
+    loc:"Hà Nội, Đà Nẵng, TP.HCM", salary:"10 – 20 triệu/tháng", time:"Linh động theo tiến độ dự án",
+    mota:["Phát triển mạng lưới đối tác và khách hàng tại địa bàn phụ trách","Tư vấn và ký kết hợp đồng với khách hàng, giải quyết các vấn đề tài chính","Khảo sát công trình, giám sát thi công đảm bảo tiến độ và chất lượng","Cập nhật thị trường, nắm bắt xu hướng cạnh tranh","Cung cấp tư liệu marketing bằng ảnh/video thực tế từ công trình","Chăm sóc khách hàng sau bán hàng, đảm bảo chỉ tiêu doanh số"],
+    yeucau:["Độ tuổi 25 – 30","Có 2 – 3 năm kinh nghiệm Sales/Đại diện kinh doanh (ưu tiên ngành Nội thất, Bất động sản, Vật liệu xây dựng)","Kỹ năng giao tiếp, đàm phán xuất sắc; nhạy bén với thị trường","Tinh thần chiến đấu mạnh mẽ, chịu được áp lực doanh số cao"],
+    quyenloi:["Thu nhập 10 – 20 triệu/tháng (lương cứng + thưởng doanh số)","Được đào tạo trực tiếp cùng CEO giàu kinh nghiệm","Lộ trình thăng tiến rõ ràng lên Trưởng phòng hoặc Giám đốc Kinh doanh Khu vực","Thưởng lễ, Tết theo quy định"]},
+  "QS / Nhân Viên Dự Toán Nội Thất": {
+    loc:"Vinhomes Grand Park, TP. Thủ Đức", salary:"12 – 20 triệu/tháng", time:"Thứ 2 – Thứ 7 · Tuyển 3 người",
+    mota:["Tiếp nhận bản vẽ kiến trúc 2D/3D từ các bộ phận liên quan","Bóc tách chi tiết kích thước, khối lượng cửa đi, cửa sổ, vách kính (nhôm, kính, nhựa, inox)","Trao đổi với kỹ thuật công trình và xưởng sản xuất để xử lý vấn đề kỹ thuật"],
+    yeucau:["Độ tuổi 22 – 30, Nam/Nữ","Thành thạo AutoCAD và SketchUp","Ưu tiên có kinh nghiệm bóc tách nội thất, đặc biệt cửa nhôm kính hoặc cửa nhựa","Nhận cả sinh viên mới tốt nghiệp ngành Cơ khí, Xây dựng, Kiến trúc","Cẩn thận, chính xác, có tư duy hình học không gian tốt"],
+    quyenloi:["Lương cứng 10 triệu/tháng + hoa hồng/thưởng dự án — tổng thu nhập cam kết 12 – 20 triệu/tháng, không giới hạn khi năng lực tốt","BHXH, BHYT sau thử việc","Thưởng lễ, Tết, lương tháng 13","Được đào tạo chuyên sâu kỹ thuật ngành cửa"]},
+  "Trợ Lý Marketing": {
+    loc:"Vinhomes Grand Park, Long Bình, Thủ Đức", salary:"10 – 20 triệu/tháng", time:"Thứ 2 – Thứ 7 · Tuyển 2 người",
+    mota:["Phối hợp trực tiếp với cấp quản lý để thực thi các chiến dịch quảng bá","Lên kế hoạch nội dung đa nền tảng","Tối ưu hoá chiến dịch quảng cáo trên Facebook, Zalo, TikTok","Hỗ trợ tổ chức sự kiện; sản xuất hình ảnh/video cơ bản","Theo dõi chỉ số tương tác và hiệu quả chiến dịch","Quản lý đội ngũ Intern, CTV; hướng dẫn, đào tạo quy trình làm việc"],
+    yeucau:["Độ tuổi 25 – 30","Tối thiểu 1 – 2 năm kinh nghiệm vị trí tương đương hoặc Content/Digital Marketing","Viết lách tốt, có thẩm mỹ; sử dụng được Canva, CapCut","Chủ động, trung thực, tinh thần trách nhiệm cao, chịu được áp lực"],
+    quyenloi:["Thu nhập 10 – 20 triệu/tháng (lương cứng + hoa hồng + thưởng KPI + thưởng năng lực)","Làm việc trực tiếp với CEO có 10+ năm kinh nghiệm","Lộ trình thăng tiến: Trưởng team → Trưởng phòng → Trợ lý CEO","BHXH, BHYT, thưởng lễ/Tết, lương tháng 13, du lịch hằng năm"]},
+  "Trợ Lý Kinh Doanh (Sales Assistant)": {
+    loc:"Vinhomes Grand Park, TP. Thủ Đức", salary:"15 – 30 triệu+/tháng", time:"Thứ 2 – Thứ 7 (8:00–12:00, 13:30–17:30) · Tuyển 2-3 người",
+    mota:["Hỗ trợ nhân sự, đối tác, khách hàng, marketing và quy trình vận hành hàng ngày","Tư vấn và chăm sóc khách hàng trên nguồn data có sẵn","Soạn thảo hợp đồng, quản lý dữ liệu khách hàng","Theo dõi doanh số, lập báo cáo định kỳ","Tham gia xây dựng quy trình bán hàng"],
+    yeucau:["Độ tuổi 22 – 30","Có tư duy phát triển bản thân, mong muốn thăng tiến lâu dài","Kỹ năng giao tiếp tốt, chủ động, chịu học hỏi","Tinh thần làm việc tốc độ cao và trách nhiệm","Ưu tiên có kinh nghiệm sales hoặc chăm sóc khách hàng"],
+    quyenloi:["Thu nhập 15 – 30 triệu+/tháng tuỳ năng lực (lương cứng + thưởng hiệu suất + hoa hồng thanh toán ngay)","Thử việc hưởng 85% lương chính thức","Đào tạo trực tiếp từ CEO có hơn 10 năm kinh nghiệm","Cơ hội thăng tiến: Trưởng team, Trưởng phòng, Trợ lý CEO, Giám đốc Kinh doanh"]},
+  "Trợ Lý Giám Đốc": {
+    loc:"Vinhomes Grand Park, TP. Thủ Đức", salary:"10 – 18 triệu/tháng", time:"Ưu tiên ứng viên có thể bắt đầu ngay",
+    mota:["Vị trí \"dưới 1 người, trên nhiều người\" — làm việc trực tiếp với CEO mỗi ngày","Sắp xếp, quản lý và theo dõi công việc cho team","Xử lý đa mảng: marketing, kinh doanh, nhân sự, vận hành"],
+    yeucau:["Siêng năng, trung thực, cầu tiến","Thành thạo Excel, Google Sheet, Word","Có tổ chức, tinh thần chịu trách nhiệm cao","Nền tảng: quản trị kinh doanh, marketing, kinh tế, tài chính, kế toán, ngoại thương"],
+    quyenloi:["Mức lương 10 – 18 triệu tuỳ năng lực","Học hỏi trực tiếp về vận hành doanh nghiệp","Cơ hội thăng tiến thành Quản lý vận hành / Trợ lý giám đốc"]},
+  "Chuyên Viên Digital Marketing": {
+    loc:"Vinhomes Grand Park, TP. Thủ Đức", salary:"10 – 15 triệu/tháng", time:"Thứ 2 – 6 (8:00–17:30) + sáng Thứ 7 · Tuyển 3 người",
+    mota:["Quản lý fanpage và website công ty","Lên kế hoạch nội dung trên TikTok, YouTube, Facebook và các nền tảng khác","Cài đặt công cụ quảng cáo: Facebook Manager, Google Tag Manager","Xây dựng kế hoạch Ads trên Google, Facebook, TikTok, Zalo, YouTube","Phối hợp đội content tạo nội dung quảng cáo","Tối ưu quảng cáo đạt KPI và báo cáo kết quả"],
+    yeucau:["Ưu tiên sinh năm 1997 – 2002, tốt nghiệp Cao đẳng trở lên ngành Marketing, Truyền thông","Có kiến thức Facebook Ads, Google Ads; dùng được Canva, CapCut, Google Analytics","Kỹ năng viết nội dung; tiếng Anh cơ bản","Có laptop cá nhân; tư duy tích cực, chủ động, chịu được áp lực"],
+    quyenloi:["Lương 10 – 15 triệu/tháng","BHXH, BHYT, 12 ngày phép, lương tháng 13","Thưởng lễ Tết, khám sức khoẻ, du lịch định kỳ","Xét tăng lương tháng 6 và tháng 12 hằng năm"]},
+  "Nhân Viên Content SEO": {
+    loc:"21/4 Lê Hồng Phong, Hải Châu, Đà Nẵng", salary:"7 – 9 triệu/tháng", time:"Thứ 2 – 6 (8:00–17:30) + sáng Thứ 7 · Tuyển 4 người",
+    mota:["Nghiên cứu, phân loại và đánh giá từ khoá kết hợp phân tích khách hàng","Quản lý bài viết trên WordPress theo nguyên tắc Content Marketing","Tối ưu trải nghiệm người dùng, xây dựng liên kết nội bộ","Sử dụng công cụ SEO: Google Analytics, Google Search Console, Ahrefs"],
+    yeucau:["Ưu tiên sinh năm 1997 – 2003, tốt nghiệp Cao đẳng trở lên (Marketing, E-commerce, Truyền thông...)","0 – 1 năm kinh nghiệm — có đào tạo cho người mới","Thành thạo WordPress, biết đo lường hiệu quả từ khoá","Có laptop cá nhân, phương tiện đi lại; tiếng Anh cơ bản"],
+    quyenloi:["Lương 7 – 9 triệu/tháng","BHXH, BHYT, 12 ngày phép, lương tháng 13","Thưởng lễ Tết, khám sức khoẻ định kỳ","Xét tăng lương 2 lần/năm"]},
+  "Trưởng Team Kinh Doanh (Nội Thất)": {
+    loc:"Vinhomes Grand Park, Long Bình, Thủ Đức", salary:"25 – 50 triệu/tháng", time:"Thứ 2 – Thứ 7 (8:00–12:00, 13:30–17:30) · Tuyển 3 người",
+    mota:["Tuyển dụng, đào tạo nhân viên về sản phẩm và kỹ năng bán hàng","Đôn đốc, giám sát đội ngũ đạt chỉ tiêu KPI hàng tháng; đánh giá hiệu suất định kỳ","Trực tiếp xử lý khách hàng khó, khách hàng tiềm năng lớn và giải quyết khiếu nại","Quản lý dữ liệu khách hàng; kiểm duyệt hợp đồng và báo giá","Xây dựng kế hoạch kinh doanh; phân tích dữ liệu bán hàng; báo cáo doanh thu định kỳ"],
+    yeucau:["Độ tuổi 30 – 40","Tối thiểu 2 năm kinh nghiệm vị trí tương đương (ưu tiên xây dựng, nội thất, bất động sản)","Chính trực, công bằng, giao tiếp tốt, đồng cảm, can đảm","Kỹ năng lãnh đạo, lập kế hoạch, giải quyết vấn đề, quản trị rủi ro"],
+    quyenloi:["Thu nhập 25 – 50 triệu/tháng tuỳ năng lực","Lương cứng + thưởng hiệu suất + hoa hồng kinh doanh — hoa hồng thanh toán ngay lập tức","Thử việc hưởng 100% lương chính thức","Đào tạo trực tiếp từ CEO 10+ năm kinh nghiệm"]},
+  "Sale Admin · Kế Toán Bán Hàng": {
+    loc:"21/4 Lê Hồng Phong, Hải Châu, Đà Nẵng", salary:"7 triệu + 1% doanh số + thưởng nóng", time:"Thứ 2 – 6 (8:00–17:30) + sáng Thứ 7",
+    mota:["Chăm sóc, tư vấn khách hàng có nhu cầu nhôm kính, nội thất, công trình qua kênh online","Gửi báo giá, chốt hợp đồng; phối hợp đội kỹ thuật","Theo dõi tiến độ bàn giao và thanh toán","Hạch toán doanh thu, chi phí; xuất hoá đơn GTGT bán hàng","Báo cáo công việc hàng tuần"],
+    yeucau:["Ưu tiên sinh năm 1998 – 2002, tối thiểu Cao đẳng ngành Marketing, Sales, Kế toán hoặc liên quan","Có kinh nghiệm Sales hoặc Kế toán bán hàng (ưu tiên ngành nội thất/xây dựng)","Giao tiếp tốt, linh hoạt, tư vấn được qua Zalo/điện thoại","Có laptop cá nhân, mong muốn công việc ổn định"],
+    quyenloi:["Lương cơ bản 7 triệu + 1% doanh số + thưởng nóng","BHXH, BHYT, 12 ngày phép, lương tháng 13","Thưởng lễ Tết, khám sức khoẻ định kỳ","Xét tăng lương tháng 6 và tháng 12 hằng năm"]}
+  };
+
+  /* ================= TIN HOẠT ĐỘNG ================= */
+  var NEWS = {
+    kyket: {title:"Lễ ký kết đầu tư & hợp tác kinh doanh tại Acorp",
+      body:["Tại văn phòng Acorp - Vinhomes Grand Park, công ty đã tổ chức lễ ký kết đầu tư và hợp tác kinh doanh với các đối tác, đánh dấu bước tiến mới trong chiến lược phát triển hệ sinh thái đa ngành gồm Adoor, Aguru, Acity và Adigital.","Buổi lễ có sự tham gia của ban lãnh đạo cùng đông đảo đội ngũ nhân sự các phòng ban. Các bên đã cùng trao đổi định hướng, thống nhất kế hoạch triển khai và cam kết đồng hành lâu dài.","Hoạt động ký kết hợp tác là một phần trong lộ trình hiện thực hoá khát vọng trở thành tập đoàn hạng A của Acorp — nơi mỗi thành viên đều có cơ hội tham gia những dự án thực tế ngay từ sớm."]},
+    daotao: {title:"Đào tạo nội bộ — nâng cấp đội ngũ mỗi tuần",
+      body:["Đào tạo nội bộ là hoạt động diễn ra thường xuyên tại Acorp. Các buổi huấn luyện về chuyên môn, kỹ năng bán hàng, marketing và tư duy quản trị được tổ chức ngay tại văn phòng với sự dẫn dắt của ban lãnh đạo và các quản lý giàu kinh nghiệm.","Nhân sự mọi cấp bậc — từ thực tập sinh đến trưởng nhóm — đều được tham gia, thực hành trực tiếp trên bảng, thảo luận tình huống thực tế và nhận phản hồi ngay trong buổi học.","Đây chính là giá trị \"Phát triển chính mình\" mà Acorp cam kết: mỗi thành viên được nâng cấp bản thân liên tục để sẵn sàng cho các vị trí quản lý, lãnh đạo tương lai."]},
+    sinhvien: {title:"Giao lưu & chào đón sinh viên — thế hệ trẻ tại Acorp",
+      body:["Acorp thường xuyên tổ chức các buổi giao lưu, tham quan văn phòng và talkshow với sinh viên các trường đại học, cao đẳng — nơi các bạn trẻ được gặp gỡ trực tiếp ban lãnh đạo, tìm hiểu môi trường làm việc thực tế và các cơ hội thực tập, việc làm.","Nhiều bạn sinh viên sau chương trình đã trở thành thực tập sinh và nhân viên chính thức của Acorp, được đào tạo bài bản ngay từ những ngày đầu.","Với môi trường \"thân thiện, yêu thương và kết nối\", Acorp luôn chào đón thế hệ trẻ dám học hỏi, dám thử thách để cùng nhau kiến tạo tương lai."]}
+  };
+
+  var _scrollPos = 0, _currentJob = '', _lastList = '';
+  var NEWS_THUMB = { kyket:'.g-item.g4 img', daotao:'.g-item.g2 img', sinhvien:'.g-item.g6 img' };
+  function showDetail(html){
+    if(!document.body.classList.contains('detail-open')) _scrollPos = window.scrollY;
+    document.getElementById('detailCard').innerHTML = html;
+    document.body.classList.add('detail-open');
+    document.getElementById('menu').classList.remove('open');
+    window.scrollTo(0,0);
+  }
+  function closeDetail(){
+    _lastList = '';
+    document.body.classList.remove('detail-open');
+    window.scrollTo(0,_scrollPos);
+  }
+  function goBack(){
+    if(_lastList){ openPage(_lastList); } else { closeDetail(); }
+  }
+  function thumbSrc(id){
+    var el = document.querySelector(NEWS_THUMB[id]);
+    return el ? el.src : '';
+  }
+  /* ============ CÁC TRANG TRONG ============ */
+  function openPage(id){
+    if(id==='jobs'||id==='news'){ _lastList = id; } else { _lastList = ''; }
+    var html = '';
+    if(id === 'jobs'){
+      var items = Object.keys(JOBS).map(function(t){
+        var j = JOBS[t];
+        return '<div class="list-item"><div><b>'+t+'</b><div class="job-meta">📍 '+j.loc+' &nbsp;·&nbsp; 💰 <span class="job-salary">'+j.salary+'</span></div></div>'+
+          '<div class="list-actions"><a class="detail-link" data-t="'+t+'" onclick="openJobByTitle(this.dataset.t)">Xem chi tiết »</a>'+
+          '<a class="apply-btn" data-t="'+t+'" onclick="openApply(this.dataset.t)">Nộp CV »</a></div></div>';
+      }).join('');
+      html = '<div class="detail-body"><h1>Việc làm tại Acorp</h1>'+
+        '<p>Các vị trí đang tuyển dụng trên toàn hệ thống Acorp — Adoor, Aguru, Acity, Adigital. Bấm "Xem chi tiết" để đọc mô tả công việc đầy đủ.</p>'+
+        items+
+        '<div class="detail-actions"><button class="btn btn-primary" onclick="openApply(\'\')">Nộp Hồ Sơ (CV) ngay</button><button class="btn btn-ghost" onclick="closeDetail()">« Về trang chủ</button></div></div>';
+    }
+    else if(id === 'news'){
+      var order = NEWS_ORDER;
+      var items2 = order.map(function(k){
+        var n = NEWS[k], src = (n.image || thumbSrc(k));
+        return '<div class="news-item" data-k="'+k+'" onclick="openNews(this.dataset.k)">'+
+          (src ? '<img src="'+src+'" alt="">' : '')+
+          '<div><b>'+n.title+'</b><p>'+n.body[0].substring(0,120)+'...</p></div></div>';
+      }).join('');
+      html = '<div class="detail-body"><h1>Hoạt động Acorp</h1>'+
+        '<p>Tin tức và khoảnh khắc đời thường của đại gia đình Acorp. Bấm vào bài viết để xem chi tiết.</p>'+
+        items2+
+        '<div class="detail-actions"><button class="btn btn-ghost" onclick="closeDetail()">« Về trang chủ</button></div></div>';
+    }
+    else if(id === 'about'){
+      var introImg = document.querySelector('.intro-img img');
+      html = '<div class="detail-body"><h1>Về Acorp</h1>'+
+        '<div class="detail-meta"><span class="chip">Tập đoàn hạng A</span><span class="chip">4 đơn vị thành viên</span><span class="chip">HN – ĐN – HCM</span></div>'+
+        '<p>Công ty Cổ phần Đầu tư Acorp được thành lập với khát vọng trở thành tập đoàn hạng A; hoạt động như một quỹ đầu tư bằng cách thu hút vốn bên ngoài để thực hiện cấp vốn, điều hành các đơn vị thành viên và các dự án.</p>'+
+        (introImg ? '<img class="page-img" src="'+introImg.src+'" alt="Đội ngũ Acorp">' : '')+
+        '<h4>Hệ sinh thái Acorp</h4>'+
+        '<ul><li><b>Adoor</b> — Cửa & Nội thất: cửa nhôm, cửa kính, cửa nhựa và giải pháp nội thất công trình</li>'+
+        '<li><b>Aguru</b> — Đào tạo: phát triển con người và kỹ năng kinh doanh</li>'+
+        '<li><b>Acity</b> — Bất động sản</li>'+
+        '<li><b>Adigital</b> — Marketing số</li></ul>'+
+        '<h4>Giá trị dành cho thành viên</h4>'+
+        '<ul><li><b>Môi trường mong ước:</b> thân thiện, yêu thương và kết nối là những gì Acorp mang đến cho bạn</li>'+
+        '<li><b>Phát triển chính mình:</b> được tham gia các chương trình đào tạo nội bộ và chuyên môn</li>'+
+        '<li><b>Cơ hội nghề nghiệp:</b> học hỏi, phát triển nhanh và trở thành nhà quản lý, lãnh đạo tương lai</li></ul>'+
+        '<div class="detail-actions"><button class="btn btn-primary" onclick="openPage(\'jobs\')">Xem vị trí đang tuyển</button><button class="btn btn-ghost" onclick="closeDetail()">« Về trang chủ</button></div></div>';
+    }
+    else if(id === 'camnhan'){
+      var grid = document.querySelector('.testi-grid');
+      html = '<div class="detail-body"><h1>Cảm nhận của nhân viên</h1>'+
+        '<p>Confession — những chia sẻ thật từ chính người Acorp.</p></div>'+
+        '<div style="padding:0 40px 40px">'+(grid ? grid.outerHTML : '')+'</div>'+
+        '<div class="detail-body" style="padding-top:0"><div class="detail-actions"><button class="btn btn-primary" onclick="openApply(\'\')">Gia nhập Acorp ngay</button><button class="btn btn-ghost" onclick="closeDetail()">« Về trang chủ</button></div></div>';
+    }
+    else if(id === 'lienhe'){
+      html = '<div class="detail-body"><h1>Liên hệ với Acorp</h1>'+
+        '<div class="contact-row">📍 <span>'+SETTINGS.address_hcm+'</span></div>'+
+        '<div class="contact-row">📍 <span>Chi nhánh Đà Nẵng: '+SETTINGS.address_dn+'</span></div>'+
+        '<div class="contact-row">📞 <span>Hotline/Zalo: <a href="tel:'+SETTINGS.phone_raw+'" style="color:var(--blue-600);font-weight:700">'+SETTINGS.phone+'</a></span></div>'+
+        '<div class="contact-row">✉️ <span>Email tuyển dụng: <a href="mailto:'+SETTINGS.email+'" style="color:var(--blue-600);font-weight:700">'+SETTINGS.email+'</a></span></div>'+
+        '<div class="contact-row">🕐 <span>Giờ làm việc: '+SETTINGS.hours+'</span></div>'+
+        '<h4>Ứng tuyển</h4>'+
+        '<p>Cách nhanh nhất để gia nhập Acorp: bấm nút bên dưới, điền thông tin và đính kèm CV — hồ sơ sẽ được gửi thẳng về bộ phận tuyển dụng.</p>'+
+        '<div class="detail-actions"><button class="btn btn-primary" onclick="openApply(\'\')">Nộp Hồ Sơ (CV) ngay</button><button class="btn btn-ghost" onclick="closeDetail()">« Về trang chủ</button></div></div>';
+    }
+    if(html) showDetail(html);
+  }
+  function openJobByTitle(title){
+    var j = JOBS[title];
+    if(!j) return;
+    _currentJob = title;
+    renderJobDetail(title, j);
+  }
+  function li(arr){ return arr.map(function(x){return '<li>'+x+'</li>'}).join(''); }
+  function openJob(el){
+    var card = el.closest('.job-card');
+    var title = card.querySelector('h3').textContent.trim();
+    _lastList = '';
+    openJobByTitle(title);
+  }
+  function renderJobDetail(title, j){
+    showDetail(
+      '<div class="detail-body">'+
+      '<h1>'+title+'</h1>'+
+      '<div class="detail-meta"><span class="chip">📍 '+j.loc+'</span><span class="chip salary">💰 '+j.salary+'</span><span class="chip">🕐 '+j.time+'</span></div>'+
+      '<h4>Mô tả công việc</h4><ul>'+li(j.mota)+'</ul>'+
+      '<h4>Yêu cầu ứng viên</h4><ul>'+li(j.yeucau)+'</ul>'+
+      '<h4>Quyền lợi & Thu nhập</h4><ul>'+li(j.quyenloi)+'</ul>'+
+      '<h4>Cách thức ứng tuyển</h4><p>Bấm nút bên dưới và điền thông tin, đính kèm CV (PDF, DOC, DOCX) — hồ sơ sẽ được gửi thẳng về bộ phận tuyển dụng Acorp. Hotline/Zalo: <a href="tel:'+SETTINGS.phone_raw+'" style="color:var(--blue-600);font-weight:700">'+SETTINGS.phone+'</a></p>'+
+      '<div class="detail-actions"><button class="btn btn-primary" onclick="openApply(_currentJob)">Nộp Hồ Sơ (CV) ngay</button><button class="btn btn-ghost" onclick="goBack()">« Quay lại</button></div>'+
+      '</div>'
+    );
+  }
+  function openNews(id, el){
+    var n = NEWS[id];
+    if(!n) return;
+    var img = el ? el.querySelector('img') : null;
+    if(!img){ var t = (n.image || thumbSrc(id)); if(t) img = { src: t }; }
+    showDetail(
+      (img ? '<img class="detail-hero" src="'+img.src+'" alt="">' : '')+
+      '<div class="detail-body">'+
+      '<h1>'+n.title+'</h1>'+
+      '<div class="detail-meta"><span class="chip">Hoạt động Acorp</span></div>'+
+      n.body.map(function(p){return '<p>'+p+'</p>'}).join('')+photosGrid(n)+
+      '<div class="detail-actions"><button class="btn btn-blue" onclick="goBack()">« Quay lại</button><button class="btn btn-primary" onclick="openApply(\'\')">Ứng tuyển vào Acorp</button></div>'+
+      '</div>'
+    );
+  }
+
+  function openApply(el){
+    var viTri = '';
+    if(typeof el === 'string'){ viTri = el; }
+    else if(el && el.closest){
+      var card = el.closest('.job-card');
+      if(card){ var h = card.querySelector('h3'); if(h) viTri = h.textContent.trim(); }
+    }
+    document.getElementById('viTri').value = viTri;
+    document.getElementById('applyModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeApply(){
+    document.getElementById('applyModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeApply(); });
+  // Bấm menu hoặc logo khi đang xem trang chi tiết → quay về trang chủ đúng mục
+  document.querySelectorAll('.menu a[href^="#"], a.logo').forEach(function(a){
+    a.addEventListener('click', function(){
+      if(document.body.classList.contains('detail-open')){
+        document.body.classList.remove('detail-open');
+      }
+      document.getElementById('menu').classList.remove('open');
+    });
+  });
+
+  /* ================= NỘI DUNG ĐỘNG TỪ CMS (content/*.json) ================= */
+  var SETTINGS = {phone:'0915.67.67.64',phone_raw:'0915676764',email:'tuyendung.acorp@gmail.com',
+    address_hcm:'Khu đô thị Vinhomes Grand Park, TP. Thủ Đức, TP. Hồ Chí Minh',
+    address_dn:'21/4 Lê Hồng Phong, Hải Châu, Đà Nẵng',
+    hours:'Thứ 2 – Thứ 7 (8:00 – 12:00, 13:30 – 17:30)'};
+  var NEWS_ORDER = ['kyket','daotao','sinhvien'];
+  function photosGrid(n){
+    if(!n.photos || n.photos.length < 2) return '';
+    var imgs = n.photos.map(function(p){return '<img src="'+p+'" alt="" style="width:100%;height:140px;object-fit:cover;border-radius:10px">'}).join('');
+    return '<h4>Hình ảnh</h4><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:6px">'+imgs+'</div>';
+  }
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function renderHomeJobs(arr){
+    var grid = document.querySelector('.job-grid');
+    if(!grid) return;
+    grid.innerHTML = arr.map(function(j){
+      return '<div class="job-card"><span class="job-tag'+(j.hot?' hot':'')+'">'+esc(j.tag||'Việc làm')+'</span>'+
+        '<h3>'+esc(j.title)+'</h3>'+
+        '<div class="job-meta"><div>📍 '+esc(j.loc)+'</div><div>💰 <span class="job-salary">'+esc(j.salary)+'</span></div></div>'+
+        '<div class="apply"><a class="detail-link" onclick="openJob(this)">Xem chi tiết »</a><a class="apply-btn" onclick="openApply(this)">Nộp Hồ Sơ (CV) »</a></div></div>';
+    }).join('');
+  }
+  function renderGallery(arts){
+    var grid = document.querySelector('.gallery-grid');
+    if(!grid) return;
+    var items = [];
+    arts.forEach(function(a, ai){
+      var key = 'a'+ai;
+      (a.photos && a.photos.length ? a.photos : [a.image]).forEach(function(p){
+        items.push({src:p, cap:(a.label || a.title), key:key});
+      });
+    });
+    items = items.slice(0, 8);
+    grid.innerHTML = items.map(function(it, i){
+      return '<div class="g-item'+(i===0?' tall':'')+' g'+((i%7)+1)+'" data-k="'+it.key+'" onclick="openNews(this.dataset.k)">'+
+        '<img src="'+it.src+'" alt="" onerror="this.remove()"><span>'+esc(it.cap)+'</span></div>';
+    }).join('');
+  }
+  function applySettings(){
+    var a = document.getElementById('f-addr');   if(a) a.textContent = SETTINGS.address_hcm;
+    var p = document.getElementById('f-phone');  if(p){ p.textContent = SETTINGS.phone; p.href = 'tel:'+SETTINGS.phone_raw; }
+    var e = document.getElementById('f-email');  if(e){ e.textContent = SETTINGS.email; e.href = 'mailto:'+SETTINGS.email; }
+  }
+  function loadContent(){
+    fetch('content/jobs.json').then(function(r){return r.json()}).then(function(d){
+      if(!d.jobs || !d.jobs.length) return;
+      JOBS = {};
+      d.jobs.forEach(function(j){ JOBS[j.title] = j; });
+      renderHomeJobs(d.jobs);
+    }).catch(function(){});
+    fetch('content/news.json').then(function(r){return r.json()}).then(function(d){
+      if(!d.articles || !d.articles.length) return;
+      NEWS = {}; NEWS_ORDER = [];
+      d.articles.forEach(function(a, i){ NEWS['a'+i] = a; NEWS_ORDER.push('a'+i); });
+      renderGallery(d.articles);
+    }).catch(function(){});
+    fetch('content/settings.json').then(function(r){return r.json()}).then(function(d){
+      Object.keys(d).forEach(function(k){ if(d[k]) SETTINGS[k] = d[k]; });
+      applySettings();
+    }).catch(function(){});
+  }
+  document.addEventListener('DOMContentLoaded', loadContent);
+</script>
+
+</body>
+</html>
